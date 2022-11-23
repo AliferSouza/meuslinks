@@ -10,6 +10,7 @@ const URL = location.href.includes("?")
 if (URL) {    
      router({minisite})  
 } else if(localStorage.hasOwnProperty("dono")) { 
+     navigateTo("/gerarLinks")
      router({gerarLinks, minisite})
 } else{    
      navigateTo("/link")
