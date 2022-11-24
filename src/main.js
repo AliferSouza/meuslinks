@@ -13,7 +13,7 @@ const URL = location.href.includes("?")
 if (URL) {    
      router({minisite})  
 } else if(localStorage.hasOwnProperty("dono")) { 
-     navigateTo("#areaAdm")
+     navigateTo("#gerarLinks")
      router({gerarLinks, minisite, areaAdm})
 } else{    
      navigateTo("#home")

@@ -134,7 +134,7 @@ export default function gerarLinks() {
 
 
     return `
-    <div class="container_gerarlink">
+  
     <div class="container" style="background:${a.COR}">
      <span class="title-link">Crie seus links</span>
 
@@ -193,7 +193,7 @@ export default function gerarLinks() {
 </div>
 
  </div>
-</div>
+
 
 
     `

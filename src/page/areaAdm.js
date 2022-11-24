@@ -48,10 +48,4 @@ export default function areaAdm(prop) {
 }
 
 
-
-
-
-
-
-
 }

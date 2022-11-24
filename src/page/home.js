@@ -124,7 +124,7 @@ export default function home() {
       }
 
     return `
-         <div class="containerhome">
+
         <div class="container">
       <span class="title">Crie seu mini MINI-SITE</span>
 
@@ -149,24 +149,24 @@ export default function home() {
               </label>
 
               <label for="B">
-                  <img src="../banner/2.jpg"  id="dois" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/2.jpg" id="dois" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
 
               <label for="C">
-                  <img src="../banner/3.jpg"  id="tres" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/3.jpg" id="tres" onclick="pegar(this)" class="escolhaa"
                       height="45px">
               </label>
               <label for="D">
-                  <img src="../banner/4.jpg"  id="quatro" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/4.jpg" id="quatro" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
               <label for="E">
-                  <img src="../banner/5.jpg"  id="cinco" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/5.jpg" id="cinco" onclick="pegar(this)" class="escolhaa"
                       height="45px">
               </label>
               <label for="F">
-                  <img src="../banner/6.jpg"  id="seis" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/6.jpg" id="seis" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
 
@@ -178,11 +178,11 @@ export default function home() {
           </div>
 
           <button type="button" class="button-home" onclick="salvarLoja()">Salvar<button>
-          <button type="button" class="button-backup" onclick="backup('')">RESTAURAR<button>
+        <button type="button" class="button-backup" onclick="backup()">RESTAURAR<button>
 
-    </div>
       </div>
   </div>
+ 
 
 `
 
