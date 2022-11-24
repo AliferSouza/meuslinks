@@ -8,7 +8,7 @@ export default function buttonVoltar(dadosUrl){
     }
 
     return`
-    <button onclick="routertMiniSite()" class="navegarDeVoltaButton"><</button>
+    <button style="color:${dadosUrl.COR}" onclick="routertMiniSite()" class="navegarDeVoltaButton"><</button>
     `
   
 }
