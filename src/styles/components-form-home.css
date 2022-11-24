@@ -1,3 +1,13 @@
+.containerhome{
+    width: 100vw;
+    height: 1000vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #adbaf1;
+
+}
+
 .container{    
     max-width: 300px;
     width: 10%;
