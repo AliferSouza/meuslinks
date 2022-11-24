@@ -1,7 +1,6 @@
 import {gerarQueryString}  from"../lib/index.js"
 
 function apiGerar(prop, props){
-    console.log(prop)
 
 const a = JSON.parse(localStorage.getItem(prop))
 const b = JSON.parse(localStorage.getItem(props))
