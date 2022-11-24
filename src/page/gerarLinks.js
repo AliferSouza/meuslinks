@@ -1,53 +1,99 @@
 import { apiGerar } from "../apiQueryString/api.js"
 import addBanco from "../lib/src/addBancoMiasIntens.js"
 import minisite from "../page/minisite.js"
+import areaadm from "../page/areaAdm.js"
 import { Select, navigateTo, router } from "../lib/index.js"
 import select from "../lib/src/Select.js"
 
-
 export default function gerarLinks() {
-    const data = []     
+    const a = JSON.parse(localStorage.getItem("dono"))
+    const data = []    
 
+    window.pegar = (e) => {          
+     if(e.id ==="facebook"){ 
+        e.style.opacity = "20%"
+        select("#instagram").style.opacity = "100%"
+        select("#whatsapp").style.opacity = "100%"
+        select("#youtube").style.opacity = "100%"
+     }
+     if(e.id ==="instagram"){
+        e.style.opacity = "20%"
+        select("#facebook").style.opacity = "100%"
+        select("#whatsapp").style.opacity = "100%"
+        select("#youtube").style.opacity = "100%"
+     }
+     if(e.id ==="whatsapp"){
+        e.style.opacity = "20%"
+        select("#facebook").style.opacity = "100%"
+        select("#instagram").style.opacity = "100%"
+        select("#youtube").style.opacity = "100%"
+     }
+     if(e.id ==="youtube"){
+        e.style.opacity = "20%"
+        select("#facebook").style.opacity = "100%"
+        select("#instagram").style.opacity = "100%"
+        select("#whatsapp").style.opacity = "100%"
+     }
+     if(e.id ==="linkedin"){
+        e.style.opacity = "20%"
+        select("#facebook").style.opacity = "100%"
+        select("#instagram").style.opacity = "100%"
+        select("#whatsapp").style.opacity = "100%"     
+        select("#youtube").style.opacity = "100%"
+        select("#site").style.opacity = "100%"
+     }
+     if(e.id ==="site"){
+        e.style.opacity = "20%"
+        select("#facebook").style.opacity = "100%"
+        select("#instagram").style.opacity = "100%"
+        select("#whatsapp").style.opacity = "100%"     
+        select("#youtube").style.opacity = "100%"
+        select("#linkedin").style.opacity = "100%"
+     }
 
-
-
-    window.pegar = (id, src) => {
-        const url = Select(".url")
-        const valores = {
-            URL: url.value,
-            ICONE: src,
-            NOME_ICONE: id
+    
+        const pegarData = {
+            ICONE: e.src,
+            NOME_ICONE: e.id
         }
-
-        data.push(valores)
-
+        data.push(pegarData)   
+   
     }
-
-
-
-
-
 
     window.salvarLink = () => {
-        const url = Select(".url").value   
-        const dataIndexFinal = data[data.length - 1]
-     
-        if (!url) {
-           alert("preencha o campo URL!")
-        } else {
-       
-            addBanco("link", dataIndexFinal)
-            Select("form").reset()
+        console.log(data)
+        const url = Select(".url").value
+        const nomeBotao = Select(".botaonome").value      
+        const colorButtons = Select(".input-color").value
+        const dataIndexFinal = data[data.length - 1]  
+        
+        
 
-            select(".buttonSite").innerHTML = `<input type="button" value="miniSite" onclick="link()">`
-
-            while (data.length) {
-                data.pop();
-            }
-
+        const valores = {
+            URL: url,
+            NOME_BOTAO: nomeBotao,            
+            ...dataIndexFinal,
+            COLOR_BUTTONS: colorButtons
         }
 
+        console.log(a)
+
+     
+
+        addBanco("link", valores)
+        
+        navigateTo("/gerarLinks")
+        router({ gerarLinks })
+        window.onload = e =>  select(".buttonSite").innerHTML  = `<input type="button" value="miniSite" onclick="link()">` 
+
     }
+
+    window.editar = () => {  
+        navigateTo("/areaadm")
+        router({ areaadm })
+
+    }
+
 
 
     window.link = () => {
@@ -64,60 +110,67 @@ export default function gerarLinks() {
 
 
     return `
-    <div class="container">
-    <div class="forms">
+    <div class="container_gerarlink">
+    <div class="container" style="background:${a.COR}">
+     <span class="title-link">Crie seus links</span>
 
-        <div class="form login">
+     <form class="form-link">
 
-            <span class="title">Crie seus links</span>
+         <input type="text" class="url input-link" placeholder="Digite sua URL de perfil" required>
+         <input type="text" class="botaonome input-link" placeholder="Nome do botão" required>
 
-            <form action="#">
+      
 
-                <div class="input-field">
-                    <input type="text" class="url" placeholder="" required>
-                </div>
+             <fieldset class="radio-image escolhaIcone">
+                 <label for="A">
+                     <img src=".././img/facebook.png" id="facebook" onclick="pegar(this)"  name="group" class="escolha"  alt="facebook" height="45px">
+                 </label>
 
-                <div class="input-field" >
+                 <label for="B">
+                     <img src=".././img/instagram.png" id="instagram" onclick="pegar(this)"  name="group" class="escolha" alt="instagram" height="45px">
+                 </label>
 
-                    <fieldset class="radio-image escolhaFoto">
-                        <label for="M">
-                            
-                            <img src=".././img/facebook.png"id="facebook" onclick="pegar(id, src)" name="facebook" class="escolha" alt="facebook"
-                                height="45px">
-                        </label>
+                 <label for="C">
+                     <img src=".././img/whatsapp.png" id="whatsapp" onclick="pegar(this)"  name="group"  class="escolha" alt="whatsapp" height="45px">
+                 </label>
+                 <label for="D">
+                     <img src="../img/youtube.png" id="youtube" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
+                 </label>    
+                 <label for="E">
+                     <img src="../img/linkedin.png" id="linkedin" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
+                 </label>    
+                 <label for="E">
+                     <img src="../img/site.png" id="site" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
+                 </label>           
+             </fieldset>
 
-                        <label for="F">
-                           
-                            <img src=".././img/instagram.png" id="instagram" onclick="pegar(id, src)"  class="escolha" alt="instagram"
-                                height="45px">
-                        </label>
 
-                        <label for="A">
-                           
-                            <img src=".././img/whatsapp.png" id="whatsapp" onclick="pegar(id, src)"  class="escolha" alt="whatsapp"
-                                height="45px">
-                        </label>
-                        <label for="B">
-                            
-                            <img src="../img/youtube.png" id="youtube" onclick="pegar(id, src)" class="escolha" alt="youtube" height="45px">
-                        </label>
-                    </fieldset>
+             <div class="color-input">
+                <span>Escolha a cor dos botões</span>
+                <input type="color" class="input-color" required>
+             </div>
 
-                </div>
 
-                <div class="input-field button">
-                    <input type="button" value="Salvar" onclick="salvarLink()">
-                </div>
-                <br />
-                <div class="buttonSite">
-                ${localStorage.hasOwnProperty("link") ?  `<input type="button" value="miniSite" onclick="link()">`   : ''}      
-                <div>   
-               </form>
+      
 
-        </div>
-    </div>
+         <button class="button-link" style=" background:${a.COR}" onclick="salvarLink()">Salvar</button>
+
+         ${localStorage.hasOwnProperty("link") ?
+          `
+          <div class="container-button-link-minisite">
+                <button class="button-link-minisite"  style=" background:${a.COR}"  onclick="link()"> MiniSite </button>
+                <button class="button-link-minisite"  style=" background:${a.COR}"  onclick="editar()">Enditar site</button>
+                <button class="button-link-minisite"  style=" background:${a.COR}"  onclick="editar()">Enditar links</button>
+         </div>
+         `
+           : `</br></br></br>`}
+     
+</form>
+
+ </div>
 </div>
-  
+
+
     `
 
 } 
