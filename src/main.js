@@ -1,4 +1,4 @@
-import home from"./page/home.js"
+import link from"./page/home.js"
 import gerarLinks from"./page/gerarLinks.js"
 import minisite from "./page/minisite.js"
 import areaAdm from "./page/areaAdm.js"
@@ -16,8 +16,8 @@ if (URL) {
      navigateTo("/gerarLinks")
      router({gerarLinks, minisite, areaAdm})
 } else{    
-     navigateTo("/home")
-     router({home})
+     navigateTo("/link")
+     router({link})
 }
 
 
