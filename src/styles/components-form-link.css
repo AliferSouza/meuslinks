@@ -110,14 +110,13 @@
 
 }
 
-
 .container_gerarlink{
     width: 100vw;
-    height: 100vh;
+    height: 1000vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #5464a8;
+    background-color: #adbaf1;
 }
 
 
