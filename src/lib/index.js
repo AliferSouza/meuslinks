@@ -12,6 +12,7 @@ import Router from "./src/Router.js"
 import compartilharURL from "./src/compartilharURL.js"
 import serverlessFuctions from "./src/serverlessFuctions.js"
 import serverlessComponet from "./src/serverlessComponet.js"
+import download from "./src/dowload.js"
 
 
 export{
@@ -29,5 +30,6 @@ export{
    compartilharURL,
    serverlessFuctions,
    serverlessComponet,
+   download
 
 }
