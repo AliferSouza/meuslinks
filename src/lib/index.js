@@ -12,11 +12,12 @@ import Router from "./src/Router.js"
 import compartilharURL from "./src/compartilharURL.js"
 import serverlessFuctions from "./src/serverlessFuctions.js"
 import serverlessComponet from "./src/serverlessComponet.js"
+import download from "./src/dowload.js"
 
 
 export{
    Emitter,
-   router,
+   Router,
    reload,
    addBanco,
    pegarUrlData,
@@ -25,9 +26,9 @@ export{
    Select,
    Api,
    navigateTo,
-   Router,
    compartilharURL,
    serverlessFuctions,
    serverlessComponet,
+   download
 
 }

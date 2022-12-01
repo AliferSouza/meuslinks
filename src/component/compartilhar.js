@@ -1,11 +1,11 @@
 import { compartilharURL } from "../lib/index.js"
 
 
-export default function compartilhar(props){
+export default function compartilhar(){
     compartilharURL("LINK", "Compartilhe o link", window.location.href )
     return`
 
-    <button onclick="compartilhar()" class="compartilhar">compartilhar➤</button>
+    <button style="" onclick="compartilhar()" class="compartilhar"><h4 class="animacao">compartilhar➤<h4></button>
  
     `
   
