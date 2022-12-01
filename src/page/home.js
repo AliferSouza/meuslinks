@@ -1,5 +1,6 @@
 import { addBanco, Router, Select, navigateTo } from "../lib/index.js"
 import gerarLinks from "./gerarLinks.js"
+import areaAdm from "./areaAdm.js"
 
 
 export default function home() {
@@ -52,9 +53,6 @@ export default function home() {
     window.pegar = async (e) => {
 
        
-
-
-
       const um =  Select("#um")
       const dois =  Select("#dois")
       const tres =  Select("#tres")
@@ -146,29 +144,29 @@ export default function home() {
           <h4> Escolha o Banner</h4>
           <fieldset class="radio-image escolhaIcone">
               <label for="A">
-                  <img src="./public/banner/1.jpg" id="um" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/1.jpg" id="um" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
 
               <label for="B">
-                  <img src="./public/banner/2.jpg" id="dois" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/2.jpg" id="dois" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
 
               <label for="C">
-                  <img src="./public/banner/3.jpg" id="tres" onclick="pegar(this)" class="escolhaa"
+                  <img src="../banner/3.jpg" id="tres" onclick="pegar(this)" class="escolhaa"
                       height="45px">
               </label>
               <label for="D">
-                  <img src="./public/banner/4.jpg" id="quatro" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/4.jpg" id="quatro" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
               <label for="E">
-                  <img src="./public/banner/5.jpg" id="cinco" onclick="pegar(this)" class="escolhaa"
+                  <img src="../banner/5.jpg" id="cinco" onclick="pegar(this)" class="escolhaa"
                       height="45px">
               </label>
               <label for="F">
-                  <img src="./public/banner/6.jpg" id="seis" onclick="pegar(this)"  class="escolhaa"
+                  <img src="../banner/6.jpg" id="seis" onclick="pegar(this)"  class="escolhaa"
                       height="45px">
               </label>
 

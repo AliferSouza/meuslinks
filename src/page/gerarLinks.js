@@ -136,24 +136,24 @@ export default function gerarLinks() {
 
              <fieldset class="radio-image escolhaIcone">
                  <label for="A">
-                     <img src="./public/img/facebook.png" id="facebook" onclick="pegar(this)"  name="group" class="escolha"  alt="facebook" height="45px">
+                     <img src="./img/facebook.png" id="facebook" onclick="pegar(this)"  name="group" class="escolha"  alt="facebook" height="45px">
                  </label>
 
                  <label for="B">
-                     <img src="./public/img/instagram.png" id="instagram" onclick="pegar(this)"  name="group" class="escolha" alt="instagram" height="45px">
+                     <img src="./img/instagram.png" id="instagram" onclick="pegar(this)"  name="group" class="escolha" alt="instagram" height="45px">
                  </label>
 
                  <label for="C">
-                     <img src="./public/img/whatsapp.png" id="whatsapp" onclick="pegar(this)"  name="group"  class="escolha" alt="whatsapp" height="45px">
+                     <img src="./img/whatsapp.png" id="whatsapp" onclick="pegar(this)"  name="group"  class="escolha" alt="whatsapp" height="45px">
                  </label>
                  <label for="D">
-                     <img src="./public/img/youtube.png" id="youtube" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
+                     <img src="./img/youtube.png" id="youtube" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
                  </label>    
                  <label for="E">
-                     <img src="./public/img/linkedin.png" id="linkedin" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
+                     <img src="./img/linkedin.png" id="linkedin" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
                  </label>    
                  <label for="E">
-                     <img src="./public/img/site.png" id="site" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
+                     <img src="./img/site.png" id="site" onclick="pegar(this)"  name="group" class="escolha" alt="youtube" height="45px">
                  </label>           
              </fieldset>
 
