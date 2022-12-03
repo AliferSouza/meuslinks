@@ -28,7 +28,7 @@ export default function areaAdm(prop) {
             <h1 class="text-backup"> Delete os links e BACKUP</h1>
             <input class="restaurar" placeholder="Dados de backup"> 
             <button onclick="restaurar()">Restaurar<button> 
-            <button onclick="window.location.reload()">HOMR<button> 
+            <button onclick="window.location.reload()">🏠<button> 
           
            `
 
