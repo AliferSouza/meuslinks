@@ -1,10 +1,10 @@
-import home  from "../page/home.js"
+import gerarLinks  from "../page/gerarLinks.js"
 import { Router, navigateTo } from "../lib/index.js"
 export default function buttonVoltar(dadosUrl){
 
     window.routertMiniSite = () => { 
            navigateTo("/")
-           Router({home})
+           Router({gerarLinks})
     }
 
     return`
