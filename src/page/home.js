@@ -120,7 +120,7 @@ export default function home() {
     }
 
     window.backup = () => {        
-          router({areaAdm}) 
+          Router({areaAdm}) 
 }
 
     return `
