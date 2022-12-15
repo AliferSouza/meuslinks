@@ -117,7 +117,7 @@ export default function home() {
           <input type="text" class="input-name input" placeholder="Digite o seu nome" required>
 
                      
-              <input type="text" onchange="document.querySelector('[data-logo]').src = this.value" data-logo-input  class="input-name input" placeholder="URL logo" required>
+              <input type="text" onkeyup="document.querySelector('[data-logo]').src = this.value" data-logo-input  class="input-name input" placeholder="URL logo" required>
               <img style="border-radius: 15px; border: 2px solid #3498db " data-logo width="100">
              
       
